@@ -15,6 +15,9 @@
 // Includes from react-native-sensitive-info
 #include <winrt/RNSensitiveInfoCPP.h>
 
+// Includes from react-native-fs
+#include <winrt/RNFS.h>
+
 namespace winrt::Microsoft::ReactNative
 {
 
@@ -28,6 +31,8 @@ void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collecti
     packageProviders.Append(winrt::RNPermissions::ReactPackageProvider());
     // IReactPackageProviders from react-native-sensitive-info
     packageProviders.Append(winrt::RNSensitiveInfoCPP::ReactPackageProvider());
+    // IReactPackageProviders from react-native-fs
+    packageProviders.Append(winrt::RNFS::ReactPackageProvider());
 }
 
 }
